@@ -3,9 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
 </head>
 <body>
-    <div>Hello world!</div>
+
+    <nav class="nav-bar">
+        <div></div>
+        <div class="center-v">
+            <a href="#" class="navbutton">About</a>
+            <a href="#project-section" class="navbutton">Projects</a>
+        </div>
+        
+    </nav>
+
+    <div id="about-section" class="center-v center-h" style="width:100%;">
+        <div class="">
+            <!-- <div class="center-h title-font" style="margin: 1rem;">
+                <h3><b>About</b></h3>
+            </div> -->
+
+            <div class="about-container center-h center-v">
+                <div>
+                    <h1 style="font-size: 3em;" class="font-color">Brillian Fieri</h1>
+                    <h2 class="font-color">Computer science graduate.</h2>
+                    <p class="font-color">This is my portfolio website. My background is in web development, and I'm currently expanding my skills into application development, with a particular focus on SwiftUI.</p>
+                    <div>
+                        <a href="https://github.com/brillianfieri?tab=repositories" target="_blank"><button class="about-button"><i class="fa fa-github"></i> GitHub</button></a>
+                        <a href="mailto:brillianfieri01@gmail.com" target="_blank"><button class="about-button"><i class="fa fa-envelope"></i> Email</button></a>
+                        <a href="https://id.linkedin.com/in/brillianfieri" target="_blank"><button class="about-button"><i class="fa fa-linkedin"></i> Linkedin</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-h">
+                <div class="p-arrow-container">
+                    <a href="#project-section"><i class="fa fa-chevron-down fa-lg font-color"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    <div id="project-section"  class="center-h" style="width:100%; padding-top: 40px; min-height: 100vh;">
+        <div >
+            <div class="center-h title-font" style="margin: 1rem;">
+                <h3><b>Projects</b></h3>
+            </div>
+
+            <div class="center-h" style="margin:10px;">
+                <button type="button" class="project-button" data-project="Store Register" onclick="projectTitleClicked(this.dataset)">Store Register</button>
+                <button type="button" class="project-button" data-project="Reminder" onclick="projectTitleClicked(this.dataset)">Reminder</button>
+                <button type="button" class="project-button" data-project="Portfolio Website" onclick="projectTitleClicked(this.dataset)">Portfolio Website</button>
+            </div>
+            <div class="center-h">
+                <div class="projects center-h center-v">
+                    <div class="project-nav-button font-color button-cursor" style="float: left;" onclick="prevClicked()">&#8249;</div>
+    
+                    <a href="./store-register.html" class="project" data-project="Store Register">
+                        <img style="max-width:100%; border-radius: 5px 5px 0 0" src="assets/store-register/dashboard.png"/>
+                        
+                        <div style="max-width:100%; padding: 0.5rem 2rem 0.5rem 2rem">
+                            <h4 class="subtitle-font" style="padding-bottom: 5px;"><b>Store Register</b></h4>
+                            <p class="body-font" style="padding-bottom: 10px;">The store register is a simple tool for sellers to manage their inventory and record sales transactions. It also includes a dashboard for gaining insights into their sales performance.</p>
+                            
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <div class="tools-used">Next.js</div>
+                                <div class="tools-used">PostgreSQL</div>
+                                <div class="tools-used">Prisma</div>
+                                <div class="tools-used">Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="./reminder.html" class="project" data-project="Reminder">
+                        <img style="max-width:100%; border-radius: 5px 5px 0 0" src="assets/reminder/your_list.png"/>
+                        
+                        <div style="max-width:100%; padding: 0.5rem 2rem 0.5rem 2rem">
+                            <h4 class="subtitle-font" style="padding-bottom: 5px;"><b>Reminder</b></h4>
+                            <p class="body-font" style="padding-bottom: 10px;">Reminder is a tool for listing things that you need to be reminded of. This application enables users to create their own reminder lists and share them with others.</p>
+                            
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <div class="tools-used">Next.js</div>
+                                <div class="tools-used">MySQL</div>
+                                <div class="tools-used">Prisma</div>
+                                <div class="tools-used">Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="./portfolio.html" class="project" data-project="Portfolio Website">
+                        <img style="max-width:100%; border-radius: 5px 5px 0 0" src="assets/portfolio/portfolio.png"/>
+                        
+                        <div style="max-width:100%; padding: 0.5rem 2rem 0.5rem 2rem">
+                            <h4 class="subtitle-font" style="padding-bottom: 5px;"><b>Portfolio Website</b></h4>
+                            <p class="body-font" style="padding-bottom: 10px;">This website. Built with pure HTML, JavaScript, and CSS.</p>
+                            
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <div class="tools-used">HTML</div>
+                                <div class="tools-used">JavaScript</div>
+                                <div class="tools-used">CSS</div>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <div class="project-nav-button font-color button-cursor" sstyle="float: right;" onclick="nextClicked()">&#8250;</div>
+                </div>
+            </div>
+
+            
+
+        </div>
+        
+    </div>
+
+    
 </body>
 </html>
+
+<script>
+    let projectIndex = 0;
+    const projects = document.getElementsByClassName("project")
+    const projectBtn = document.getElementsByClassName("project-button")
+
+    function displayProject(projects, projectIndex){
+        for(let index = 0; index < projects.length ; index++){
+            if(index == projectIndex){
+                projects[index].style.display = 'block'
+                projectBtn[index].style.opacity = '1.0'
+            }else{
+                projects[index].style.display = 'none'
+                projectBtn[index].style.opacity = '0.7'
+            }
+            
+        }
+    }
+
+    function prevClicked(){
+        projectIndex--;
+        if(projectIndex < 0){
+            projectIndex = projects.length-1;
+        }
+        displayProject(projects, projectIndex);
+    }
+
+    function nextClicked(){
+        projectIndex++;
+        if(projectIndex >= projects.length){
+            projectIndex = 0;
+        }
+        displayProject(projects, projectIndex);
+    }
+
+    function projectTitleClicked(item){
+        
+        for(let index = 0; index < projects.length ; index++){
+            if(projects[index].dataset.project.match(item.project)){
+                displayProject(projects, index);
+                projectIndex = index;
+            }
+        }
+    };
+
+    displayProject(projects, projectIndex);
+
+
+
+
+
+    
+    
+</script>

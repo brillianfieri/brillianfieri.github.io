@@ -1,0 +1,47 @@
+.image-detail{
+    max-width: 90%;
+    max-height: 90vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(143, 143, 151, 0.3), 1px 2px 3px rgba(153, 153, 153, 0.2);
+}
+
+.image-detail-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    padding-bottom: 20px;
+}
+
+.summary-box{
+    padding:20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px rgba(143, 143, 151, 0.3), 1px 2px 5px rgba(153, 153, 153, 0.2);
+}
+
+.github-button{
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background: rgba(49, 126, 30, 0.767);
+    box-shadow: 1px 5px 8px rgba(20, 20, 25, 0.3), 1px 2px 5px rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    border:0;
+    color:white;
+    font-weight: 500;
+    width: 120px;
+    margin:15px 5px 0 0 ;
+    padding:12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .summary-box{
+        background-color: #263859;
+        box-shadow: 1px 3px 3px rgba(11, 11, 31, 0.3), 1px 2px 5px rgba(0,0,0,0.2)
+    }
+    .image-detail{
+        box-shadow: 1px 2px 4px rgba(11, 11, 31, 0.3), 1px 2px 3px rgba(0,0,0,0.2);
+    }
+}

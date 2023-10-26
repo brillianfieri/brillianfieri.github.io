@@ -1,0 +1,50 @@
+#about-section {
+    scroll-behavior: smooth;
+}
+
+.about-container{
+    height:100vh;
+    width:100vw;
+    padding-right:5vw;
+    padding-left:5vw;
+}
+
+
+.about-button{
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background: rgba(49, 126, 30, 0.767);
+    box-shadow: 1px 5px 8px rgba(97, 97, 154, 0.11), 1px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border:0;
+    width: 90vw;
+    color:white;
+    font-weight: 500;
+    margin: 15px 0 0 0 ;
+    padding:12px;
+}
+
+.about-button:hover {
+    background: rgba(58, 148, 36, 0.822);
+    transform: translateY(-1px);
+    box-shadow: 1px 10px 16px rgba(97, 97, 154, 0.11), 1px 4px 10px rgba(0,0,0,0.1);
+}
+
+.p-arrow-container{
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-container {
+        width: 80vw;
+        align-items: center;
+        height:100vh;
+
+    }
+    .about-button{
+        width: 120px;
+        margin:15px 5px 0 0 ;
+    }
+}

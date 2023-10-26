@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div></div>
+        <div class="center-v">
+            <a href="./index.html" class="navbutton">About</a>
+            <a href="./index.html#project-section" class="navbutton">Projects</a>
+        </div>
+        
+    </nav>
+
+    <div class="center-v center-h" style="width:100%; padding-top: 40px; padding-left:10%; padding-right:10%">
+        <div class="">
+            <div class="center-h title-font" style="margin: 1rem;">
+                <h3><b>Store Register</b></h3>
+            </div>
+
+            <div>
+                <p class="body-font" style="text-align: center; margin-bottom: 1rem;">
+                    The store register is a simple tool for sellers to manage their inventory and record sales transactions. It also includes a dashboard for gaining insights into their sales performance.
+                    <br/><br/>
+                </p>
+
+                <div class="center-h" style="padding-bottom: 1rem;">
+                    <div class="summary-box">
+                        <div>
+                            <h4 class="subtitle-font"  style="text-align: center; padding-bottom: 0.3rem;">Summary</h4>
+                            <h5 class="sub-subtitle-font">Key Features:</h5>
+                            <ul class="body-font">
+                                <li>Registration and login using credentials.</li>
+                                <li>Inventory and transaction management for admin role.</li>
+                                <li>Simple dashboard to summarize sales performance for admin role.</li>
+                                <li>Transaction input via cart checkout for admin and employee role.</li>
+                                <li>Application of a dark mode scheme throughout the entire website.</li>
+                                <li>Responsive design on various screen sizes.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="sub-subtitle-font" style="margin-top: 1rem;">Technologies Used:</h5>
+                            <ul class="body-font">
+                                <li>Next.js 13 as the framework with the Pages directory.</li>
+                                <li>PostgreSQL as the database system.</li>
+                                <li>Prisma as the database connector.</li>
+                                <li>Tailwind CSS framework for styling.</li>
+                                <li>Next-auth library for authentication.</li>
+                                <li>Code snippets sourced from Flowbites, Stack Overflow, and Tutorialspoint websites.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-h" style="margin-bottom: 2.5rem;">
+                    <a href="https://github.com/brillianfieri/store-register" target="_blank"><button class="github-button"><i class="fa fa-github"></i> GitHub</button></a>
+                </div>
+
+                <hr/>
+
+                <div style="margin-top: 1.5rem;">
+                    <h3 class="subtitle-font" style="text-align: center;"><b>In-Depth</b></h3>
+                </div>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">1. Account and Authentication</h4>
+                <div class="body-font" style="padding-top: 0.5rem;">
+                    This app uses Next-auth to control the authentication process. There are two account roles available:
+                </div>
+
+                <ul style="padding-top: 0.5rem;">
+                    <li>
+                        <div>
+                            <h4 class="body-font"><b>Employee</b></h4>
+                            <p>In this application, the 'Employee' role is designed for regular employees, granting them the capability to utilize a shopping cart feature for item selection and subsequently proceed to checkout. Upon completing the checkout process, the transaction is recorded in the transaction history.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h4 class="body-font"><b>Admin</b></h4>
+                            <p>This role holds higher privileges compared to the 'Employee' role. Admins possess all the abilities of the 'Employee' role, with the added capabilities to manage store inventory, delete past transactions, oversee user accounts, and monitor the change log across the entire application.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">2. Dashboard</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    Dashboard can only be accessed by the Admins. This page displays charts for the total transactions in the current month, total sales by items, and total sales by category. Additionally, it features a chart comparing gross sales for the last three years.
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/dashboard.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Dashboard</p>
+                </div>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">3. Inventory Management</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    This page enables Admins to add, edit, and delete items in the inventory. Additionally, they can manage item categories by adding, modifying, or deleting category items. Employees in the 'Employee' role can access this page to view the inventory status but do not have the privilege to modify it.
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/inventory.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Inventory Page (Admin Role)</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/inventory-add-item.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Add Item (Admin Role)</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/inventory-category.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Edit Category (Admin Role)</p>
+                </div>
+
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">4. Transaction</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    On the Transaction page, both Employees and Admins can create new transactions and access the history of past transactions. However, only Admins have the authority to delete past transactions.
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/transaction.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Transaction (Admin Role)</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/transaction-cart.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Add Transaction (Employee Role): On this page, Employees and Admins can add items to the cart and proceed to checkout. The checkout process results in the creation of a new transaction history.</p>
+                </div>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">5. Admin Panel</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    This page contains two tabs: User and Log. On the 'User' tab, the admin can edit or delete users' accounts. For the 'Log' tab, the admin can review the activity logs across the app.
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/admin-user.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Admin Page - User</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/admin-log.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Admin Page - Log</p>
+                </div>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">6. Dark Mode</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    This app automatically applies a dark or light theme based on the device preference. Below are some examples of pages with dark mode applied:
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/dark_dashboard.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Dashboard Page</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" src="assets/store-register/dark_inventory.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Inventory Page (Employee Role)</p>
+                </div>
+
+                <h4 class="sub-subtitle-font" style="margin-top: 1rem;">7. Responsive Design</h4>
+                <div class="body-font" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                    This app's user interface will automatically adapt to various screen sizes. Below are some examples of responsive design:
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" style="height: 70vh;" src="assets/store-register/responsive_tablet.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Dashboard on Tablet</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-detail-container">
+                        <img class="image-detail" style="height: 70vh;"  src="assets/store-register/responsive_phone.png"/>
+                    </div>
+                    <p class="body-font" style="text-align: center; padding-top: 0.2rem;">Dashboard on Phone</p>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+
+
+
+
+    
+    
+</script>

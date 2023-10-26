@@ -1,0 +1,67 @@
+.projects{
+    width: 90%;
+    margin-bottom: 30px;
+
+}
+
+.project{
+    display: none;
+    /* box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3); */
+    background-color: whitesmoke;
+    border-radius: 5px;
+    width:85%;
+    transition: all 0.2s ease;
+    box-shadow: 1px 5px 8px rgba(97, 97, 154, 0.3), 1px 2px 5px rgba(0,0,0,0.2);
+}
+
+.project-nav-button{
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 8px;
+    font-size: 4em;
+    /* background: rgba(0,0,0,0.2); */
+}
+
+.project-button{
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background: rgba(49, 126, 30, 0.767);
+    box-shadow: 1px 5px 8px rgba(97, 97, 154, 0.11), 1px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border:0;
+    color:white;
+    font-weight: 500;
+    margin:5px;
+    padding:12px;
+    
+}
+
+.project-button:hover {
+    background: rgba(58, 148, 36, 0.822);
+    transform: translateY(-1px);
+    box-shadow: 1px 10px 16px rgba(97, 97, 154, 0.11), 1px 4px 10px rgba(0,0,0,0.1);
+}
+
+.tools-used{
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    border-radius:5px;
+    background-color: rgba(97, 196, 72, 0.782);
+    font-size: 0.8rem;
+    color: whitesmoke;
+}
+
+@media only screen and (min-width: 768px) {
+    .project{
+        width:65%;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .project{
+        
+        background-color: #263859;
+        box-shadow: 1px 5px 8px rgba(11, 11, 31, 0.3), 1px 2px 5px rgba(0,0,0,0.2)
+    }
+}
